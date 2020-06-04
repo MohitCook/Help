@@ -1,0 +1,25 @@
+# This is for my urls.
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('', include(
+        'main.urls'))
+    path('admin/', admin.site.urls),
+]
+
+#This is for the url of my main home page.
+from django.urls import path
+from.import views
+
+app_name = "main"
+urlpatterns = [
+    path("", views.homepage, name"homepage"),
+]
+
+#This is for my view bar
+from django.shortcuts import render
+from django.http import HttpResponse
+
+def homepage(request):
+ return.HttpResponse(" This is awesome site")
